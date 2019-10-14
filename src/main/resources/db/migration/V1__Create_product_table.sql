@@ -1,4 +1,4 @@
-CREATE TABLE `dmall_product_db`.`product`  (
+CREATE TABLE `product`  (
   `id` bigint(0) NOT NULL AUTO_INCREMENT,
   `name` nvarchar(100) NULL,
   `description` nvarchar(2000) NULL,

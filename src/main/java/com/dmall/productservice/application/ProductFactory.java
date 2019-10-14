@@ -1,11 +1,11 @@
 package com.dmall.productservice.application;
 
 import com.dmall.productservice.domain.product.Product;
+import com.dmall.productservice.domain.product.ProductPrice;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
-
 
 @Component
 public class ProductFactory {
@@ -16,7 +16,7 @@ public class ProductFactory {
         return Product.builder()
                 .name(name)
                 .description(description)
-                .price(price)
+                .price(ProductPrice.of("RMB", price))
                 .isOnSale(isOnSale)
                 .build();
     }

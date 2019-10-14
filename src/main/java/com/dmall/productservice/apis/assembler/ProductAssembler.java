@@ -7,15 +7,12 @@ import com.dmall.productservice.domain.product.Product;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-
 @Component
 public class ProductAssembler {
-
 
     protected static final ModelMapper mapper = new ModelMapper();
 
@@ -38,17 +35,11 @@ public class ProductAssembler {
         } else {
             return null;
         }
-
     }
 
     public List<ProductResponse> toProductResponseList(List<Product> products) {
-
-        if (!CollectionUtils.isEmpty(products)) {
-            return products.stream()
-                    .map(c -> mapper.map(c, ProductResponse.class))
-                    .collect(Collectors.toList());
-        } else {
-            return null;
-        }
+        return products.stream()
+                .map(c -> mapper.map(c, ProductResponse.class))
+                .collect(Collectors.toList());
     }
 }

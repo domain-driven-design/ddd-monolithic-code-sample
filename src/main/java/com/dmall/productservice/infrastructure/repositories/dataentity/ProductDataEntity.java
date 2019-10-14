@@ -2,6 +2,7 @@
 package com.dmall.productservice.infrastructure.repositories.dataentity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -28,5 +29,7 @@ public class ProductDataEntity {
 
     @Column(nullable = false)
     private Boolean isOnSale;
+
+    public ProductDataEntity() { }
 }
 
