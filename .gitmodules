@@ -1,3 +1,0 @@
-[submodule "api/product"]
-	path = api/product
-	url = https://github.com/DDD-China/product-service-contracts.git
