@@ -1,5 +1,3 @@
-## DDD 风格的微服务种子项目
+## monolithic-code-sample
 
-
-### 契约测试
-
+A mono project to present how DDD style project looks like, organized by multiple modules for per bounded context.
